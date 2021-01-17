@@ -1,0 +1,324 @@
+/* orden secciones: TAGS, CLASES, IDS, EFECTOS, RESPONSIVE/media-queries */
+
+*{ /* reseter */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    /*color: #f3e600; /* Pantone 3945C */
+}
+/* seccion TAGS */
+body{
+    background-image: linear-gradient(to bottom, #c0c0c0, #ffffff, #ffffff, #c0c0c0);
+}
+img{
+    background-image: url("../images/ph.png");
+    background-position: center;
+    background-size: contain;
+}
+header, section, main{
+    text-align: center;
+}
+/*footer{
+    height: 46px;
+}*/
+footer div{
+    text-align: center;
+}
+h1{
+    margin: 20px;
+}
+h3{
+    color: #311000;
+    margin-top: 20px;
+    line-height: 28px;
+}
+p {
+    margin: 8px 0px
+}
+a{
+    text-decoration-line: none;
+    color: #000000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+a em{
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+header a img{
+    width: 162px;
+    height: 126px;
+}
+hr{
+    margin: 8px auto;
+    min-width: 300px;
+}
+ul, ol{
+    margin: 8px auto;
+    padding-left: 20px;
+    text-align: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 4px;
+    color: #000000;
+    padding-left: 0px;
+}
+ol li{
+    color: #101010;
+    list-style-type: none;
+    font-weight: 600;
+}
+nav{
+    margin: 0px 0px 130px 0px;
+}
+nav ul{
+    padding-left: 0px;
+    margin: -5px 0px;
+}
+nav ul li{
+    height: 25px;
+}
+header img{
+    border-radius: 35px;
+    border: #000000 double 5px;
+}
+main{
+    animation: mainWhoooosh 0.75s ease-in-out 0s 1 normal none running; /* ayuda-memoria: animation: {name, duration, timing-func, delay, iter-count, dir, fill-mode(??), play-state} */
+    /* el hack no sirvio como tal... pero habia otra version que si! abajo implementado */
+    min-height: calc(100vh - 275px); /* footer-hack = (header + margin:) 185 + 8 + (footer + margin:) 46 + 8 = 247... != 275 --> faltan 28px!! */
+}
+article p {
+    padding: 16px 10px;
+    line-height: 1rem;
+}
+article p img{
+    border: black 3px dotted;
+    padding: 3px;
+    width: 250px;
+    height: 250px;
+}
+table, th, tr, td{
+    margin: auto;
+    border: 1px solid #000000;
+}
+td{
+    text-align: justify;
+    line-height: 20px;
+}
+td ul{
+    margin-bottom: 0px;
+}
+td ul li{
+    list-style-type: square;
+    color: #000000;
+    text-align: justify;
+}
+form{
+    margin-bottom: 25px;
+    text-align: justify;
+    padding: 10px;
+}
+form p{
+    padding-top: 40px 40px;
+}
+input, select{
+    margin-bottom: 18px;
+}
+input[type=text], input[type=email], textarea{
+    color: #da5010 !important;
+}
+input[type=reset]{
+    width: 200px;
+    justify-self: center;
+}
+textarea{
+    margin-bottom: 32px;
+}
+/* seccion CLASES */
+.copyRFooter{
+    font-weight: bolder;
+    font-size: smaller;
+    text-align: center;
+    color: #da5010;
+    min-width: 450px;
+    display: inline;
+}
+.rowPar{
+    background-color: #cecece;
+    text-align: right;
+    max-width: 600px;
+}
+.rowImpar{
+    background-color: #e2e2e2;
+    text-align: left;
+    max-width: 600px;
+}
+.dropdown-menu{
+    width: 100%;
+    background-color: transparent;
+    border: 0px;
+}
+.squareLinks{
+    height: 250px;
+    margin: auto 3px 3px 3px;
+    margin-top: 30px;
+    background-color: rgba(218, 80, 16, 0.1);
+    border-radius: 10%;
+    display: grid;
+    align-content: center;
+    text-decoration: none;
+    /*width: 90%;*/
+    max-width: 300px;
+}
+.darkHover{
+    /*background-color: rgba(0,0,0,0.6);
+    height: auto;*/
+    margin: 0 auto 16px;
+    border-radius: 0px 0px 40px 40px;
+    padding-bottom: 10px;
+}
+.imgFilament{
+    width: 200px;
+    min-width: 200px;
+    min-height: 200px;
+}
+/* descomentar para que 1) la tabla tenga el header fijo y 2) la tabla hace overflow para scrollear (y asi poder hacer el efecto descripto en el punto anterior)
+.tableFixHead{
+    overflow-y: auto;
+    height: 600px;
+}
+.tableFixHead thead th{
+    position: sticky;
+    top: 0;
+    background: #a0a0a0;
+}/*
+
+/* seccion IDS */
+#titleSection{
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    color: #632100;
+    font-size: 32px;
+}
+#top{
+    margin-top: 8px;
+}
+#dropdownMenu1{
+    width: 100%;
+}
+
+/* seccion EFECTOS */
+article p img:hover{
+    border: #FFFFFF 3px dotted;
+}
+.darkHover:hover{
+    background-color: rgba(218, 80, 16, 0.75);
+}
+.darkHover div:hover{
+    background-color: unset;
+}
+.squareLinks:hover, .squareLinks:focus{
+    background-color: rgba(218, 80, 16, 0.4);
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+@keyframes linkFocus{ 
+    0%{background-color: #b0b0b0;}
+    50%{background-color: #da5010;}
+    100%{background-color: #b0b0b0;}
+}
+li a:hover, li a:focus{
+    animation: linkFocus 0.75s ease-in 0s 1 normal none running;
+    background-color: #b0b0b0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 120%;
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+    height: 25px;
+    text-decoration-line: none;
+}
+@keyframes mainWhoooosh{
+    0%{transform: translateY(-500px); opacity: 0%;}
+    50%{transform: translateY(100px); opacity: 50%;}
+    75%{transform: translateY(-50px); opacity: 75%;}
+    100%{transform: translateY(0px); opacity: 100%;}
+}
+/* seccion RESPONSIVE/media-queries */
+@media only screen and (min-width: 480px) { /* no es un breakpoint oficial, pero da mas control sobre los tamaños! */
+    nav{
+        margin: 0px 0px 30px 0px;
+    }    
+    nav ul li{
+        display: inline;
+    }
+    li a:hover, li a:focus{
+        font-size: 100%;
+        margin-left: 0px;
+    }
+    form div.gridContainer{ /* no muy convencido, pero me overfloweaba muy feo "/ */
+        width: 360px;
+    }
+    .imgFilament{
+        width: 300px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    nav{
+        margin: 0px;
+    }
+    .dropdown, #dropdownMenu1{
+        width: 100px;
+    }
+    nav ul li{
+        display: block;
+    }
+    ul{
+        text-align: justify;
+    }
+    li a:hover, li a:focus{
+        font-size: 120%;
+        margin-left: 20px;
+    }
+    .copyRFooter{
+        display: block;
+        font-size: larger;
+    }
+    article p img{
+        width: 500px;
+        height: 500px;
+    }
+    form div.gridContainer{ /* no muy convencido, pero me overfloweaba muy feo "/ */
+        width: auto;
+    }    
+    #navMenu{
+        position: fixed; /* cada vez mejor, ahora con la animacion de dropdown, se podria hacer que salga del borde de la pantalla el menu (*TODO*). por ahora me convence jaja */
+        z-index: 2; /* previene bugs con la tabla, que pasabaa tener mayor "prioridad" que el menu de navegacion! */
+        top: 20px;
+        left: 0px;
+    }
+    
+}
+@media only screen and (min-width: 1024px) {
+    nav{
+        margin: 0px;
+        top: -130px;
+    }
+    article p img{
+        width: 700px;
+        height: 700px;
+    }
+    .imgFilament{
+        width: 350px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .imgFilament{
+        width: auto;
+    }
+}
+
+/* seccion OVERWRITES BOOTSTRAP */

@@ -1,0 +1,302 @@
+/* orden secciones: TAGS, CLASES, IDS, EFECTOS, RESPONSIVE/media-queries */
+
+@import "vars";
+
+*{ /* reseter */
+    font-family: $ff-arial;
+    margin: 0;
+    padding: 0;
+    /*color: #f3e600; /* Pantone 3945C */
+}
+
+/* seccion TAGS */
+body{
+    background-image: linear-gradient(to bottom, $color-gris, $color-blanco, $color-blanco, $color-gris);
+    img{
+        background-image: url("../images/ph.png");
+        background-position: $align-center;
+        background-size: contain;
+    }
+    header{
+        text-align: $align-center;
+        a img{
+            width: 162px;
+            height: 126px;
+        }
+    }
+    section, main{ text-align: $align-center; }
+    footer div{ text-align: $align-center; }
+    h1{ margin: $margin-125rem; }
+    p{margin: 8px 0px}
+    a{
+        text-decoration-line: none;
+        color: $color-negro;
+        font-family: $ff-impact;
+        font-weight: lighter;
+        letter-spacing: 1px;
+        em{
+            text-transform: uppercase;
+            font-family: $ff-impact;
+        }
+    }
+    hr{
+        margin: 8px auto;
+        min-width: 300px;
+    }
+    h2, h3{
+        color: #311000;
+        margin-top: $margin-125rem;
+    }
+    h3{
+        line-height: 28px;
+    }
+    ul, ol{
+        margin: 8px auto;
+        padding-left: $margin-125rem;
+        text-align: $align-center;
+    }
+    ul li{
+        list-style: none;
+        margin-left: 4px;
+        color: $color-negro;
+        padding-left: 0px;
+    }
+    nav{
+        margin: 0px 0px 130px 0px;
+        ul{
+            padding-left: 0px;
+            margin: -5px 0px;
+            li{
+                height: 25px;
+                & a:hover, & a:focus{
+                    animation: linkFocus 0.75s ease-in 0s 1 normal none running;
+                    background-color: #b0b0b0;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    font-size: $font-oversize;
+                    margin: 0;
+                    margin-left: $margin-125rem;
+                    padding: 0;
+                    height: 25px;
+                    text-decoration-line: none;
+                }
+            }
+        }
+    }
+    header img{
+        border-radius: 35px;
+        border: $color-negro double 5px;
+    }
+    article p{
+        padding: 16px 10px;
+        line-height: 1rem;
+        img{
+            border: $color-negro 3px dotted;
+            padding: 3px;
+            width: $gal-img-size-sm;
+            height: $gal-img-size-sm;
+            &:hover{ border: $color-blanco 3px dotted; }
+        }
+    }
+    table, th, tr, td{
+        margin: auto;
+        border: 1px solid $color-negro;
+    }
+    td{
+        text-align: $align-justify;
+        line-height: $margin-125rem;
+        ul{
+            margin-bottom: 0px;
+            li{
+                list-style-type: square;
+                color: $color-negro;
+                text-align: $align-justify;
+            }
+        }
+        ol{
+            li{
+                color: #101010;
+                list-style-type: none;
+                font-weight: 600;
+            }
+        }
+    }
+    form{
+        margin-bottom: 25px;
+        text-align: $align-justify;
+        padding: 10px;
+        p{ padding-top: 40px 40px; }
+    }
+    textarea{
+        margin-bottom: 32px;
+        color: $color-base-orange;
+    }
+    select{ margin-bottom: 18px; }
+    input{
+        &[type=text], &[type=email]{ color: $color-base-orange; }
+        &[type=reset]{
+            width: 200px;
+            justify-self: $align-center;
+        }
+    }
+    main{
+        animation: mainWhoooosh 0.75s ease-in-out 0s 1 normal none running; /* ayuda-memoria: animation: {name, duration, timing-func, delay, iter-count, dir, fill-mode(??), play-state} */
+        /* el hack no sirvio como tal... pero habia otra version que si! abajo implementado */
+        min-height: calc(100vh - 275px); /* footer-hack = (header + margin:) 185 + 8 + (footer + margin:) 46 + 8 = 247... != 275 --> faltan 28px!! */
+    }
+}
+
+/* seccion CLASES */
+.copyRFooter{
+    font-weight: bolder;
+    font-size: smaller;
+    text-align: $align-center;
+    color: $color-base-orange;
+    min-width: 450px;
+    display: inline;
+}
+.rowPar{
+    background-color: #cecece;
+    text-align: right;
+    max-width: 600px;
+}
+.rowImpar{
+    background-color: #e2e2e2;
+    text-align: left;
+    max-width: 600px;
+}
+.dropdown-menu{
+    width: 100%;
+    background-color: transparent;
+    border: 0px;
+}
+.squareLinks{
+    height: $gal-img-size-sm;
+    margin: auto 3px 3px 3px;
+    margin-top: 30px;
+    background-color: rgba(218, 80, 16, 0.1);
+    border-radius: 10%;
+    display: grid;
+    align-content: $align-center;
+    text-decoration: none;
+    max-width: 300px;
+    &:hover, &:focus{
+        background-color: rgba(218, 80, 16, 0.4);
+        text-decoration: none; /* redundante? posiblemente. util? dudoso. me deja tranquilo de que va a andar? definitivamente! */
+        color: rgba(0, 0, 0, 0.6);
+    }
+    
+}
+.darkHover{
+    margin: 0 auto 16px;
+    border-radius: 0px 0px 40px 40px;
+    padding-bottom: 10px;
+    &:hover{
+        background-color: rgba(218, 80, 16, 0.75);
+        & div:hover{ background-color: unset; }
+    }
+}
+.imgFilament{ /* hack feo para que no se desacomoden las imagenes del fila "/ */
+    width: 200px;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+/* seccion IDS */
+#titleSection{
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    color: #632100;
+    font-size: 32px;
+}
+#top{ margin-top: 8px; }
+#dropdownMenu1{ width: 100%; }
+
+/* seccion EFECTOS */
+@keyframes linkFocus{ 
+    0%{ background-color: #b0b0b0; }
+    50%{ background-color: $color-base-orange; }
+    100%{ background-color: #b0b0b0; }
+}
+@keyframes mainWhoooosh{ /* salio buenisimo (aunque sea un efecto medio "violento" a la vista jaja, gracias a la union propia, de tutores y un compañero!! */
+    @each $val, $resta in $valResta{
+        #{$val} {
+            transform: translateY($resta);
+            opacity: #{$val};
+        }
+    }
+}
+
+/* seccion RESPONSIVE/media-queries */
+@media only screen and (min-width: 480px){ /* no es un breakpoint oficial, pero da mas control sobre los tamaños! */
+    body{
+        nav{
+            margin: 0px 0px 30px 0px;
+            ul{
+                display: inline;
+                li{
+                    & a:hover, & a:focus{
+                        font-size: 100%;
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+        form div.gridContainer{ width: 360px; } /* no muy convencido, pero me overfloweaba muy feo "/ */
+        .imgFilament{ width: 300px; }
+    }
+}
+@media only screen and (min-width: 768px){
+    body{
+        nav{
+            margin: 0px;
+            ul{
+                display: block;
+                text-align: $align-justify;
+                li{
+                    & a:hover, & a:focus{
+                        font-size: 120%;
+                        margin-left: $margin-125rem;
+                    }
+                }
+            }
+        }
+        article p img{
+            width: $gal-img-size-md;
+            height: $gal-img-size-md;
+        }
+        .dropdown, #dropdownMenu1{ width: 100px; }
+        .copyRFooter{
+            display: block;
+            font-size: larger;
+        }
+        form div.gridContainer{ width: auto; } /* no muy convencido, pero me overfloweaba muy feo "/ */
+        #navMenu{
+            position: fixed;
+            z-index: 2;
+            top: $margin-125rem;
+            left: 0px;
+        }
+    }
+}
+@media only screen and (min-width: 1024px){
+    body{
+        nav{
+            margin: 0px;
+            top: -130px;
+        }
+        article p img{
+            width: $gal-img-size-lg;
+            height: $gal-img-size-lg;
+        }
+        .imgFilament {width: 350px; }
+    }
+}
+@media only screen and (min-width: 1200px){
+    body{
+        .imgFilament{ width: auto; }
+    }
+}
+
+/* seccion OVERWRITES BOOTSTRAP */
+/* nada por aca... yet! */
