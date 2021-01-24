@@ -1,2 +1,2 @@
-# proy-ch-fz-clase14-github
-Proyecto clase 15 - GitHub
+# proy-ch-fz-final
+Proyecto Final Curso Web Development - GitHub
