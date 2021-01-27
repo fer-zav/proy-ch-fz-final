@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Imprimundo3D - Home Page</title>
+        <title>Imprimundo3D - Inicio</title>
         <meta charset="UTF-8">
         <meta name="description" content="Página de Inicio">
         <meta name="keywords" content="Printing, 3D, Impresion3D, Impresion 3D, Impresion, 3D Printing, Impresora 3D, Imprimundo3D, Impresion 3D Argentina, Impresion 3D Buenos Aires, Servicio Impresion 3D, Presupuesto Impresion 3D, Impresion 3D Reciclable, Impresion 3D Funcional, Impresion 3D Prototipado, Impresion 3D Miniaturas, Impresion 3D Figuras, Impresion 3D Estatuas, Impresion 3D Personajes, Impresion 3D Modelo 3D, Impresion 3D Modelo, Impresion 3D Modelado, Impresion 3D Diseño, Materiales Impresion 3D, Impresion 3D FDM, Filamento Impresion 3D, Impresion 3D SLA, Resina Impresion 3D, Impresion 3D PLA, Impresion 3D ABS, Impresion 3D PETG, Impresion 3D HIPS, Impresion 3D Flex, Impresora 3D Prusa, Impresora 3D Creality, Impresora 3D Anycubic, Impresora 3D Tevo, Impresora 3D Anet, Impresora 3D Formlabs, Impresora 3D Wanhao, Pagina de Inicio, Pagina Principal, Landing Page, Home Page, Inicio, Principal">
         <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.5.3.min.css" /> <!-- CDN de Bootstrap del CSS -->
-        <link rel="stylesheet" type="text/css" href="styles/main.min.css" /> <!-- estilos de scss minificado! -->
+        <link rel="stylesheet" type="text/css" href="styles/main.min.css" /> <!-- main personal -->
+        <link rel="stylesheet" type="text/css" href="styles/icomoon_custom.css" /> <!-- icomoon icons -->
         <link rel="icon" href="images/favicon.png">
         <script src="js/jquery-3.5.1.slim.min.js"></script> <!-- CDN de la librería de Jquery  -->
     </head>
+
     <body>
+        <!-- seccion header -->
         <div class="col-12">
             <header id="top">
                 <a href="index.html"><img src="images/logo.png" alt="[logo placeholder]"></a>
-                <h1 id="titleSection">Home Page</h1>
+                <h1 id="titleSection">Inicio</h1>
             </header>
         </div>
 
+        <!-- seccion menu -->
         <div class="container">
-            <nav class="col-xl-2" id="navMenu">  <!-- el menu (sin hamburguesa yet) esta un poco mas! -->
+            <nav class="col-xl-2" id="navMenu">
                 <div class="dropdown d-flex justify-content-center">
                     <button class="btn btn-primary dropdown-toggle buttonPrincipal" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
                         <ul>
-                            <li><a href="index.html"><em>Home Page</em></a></li>
-                            <li><a href="pages/historia.html">[PH] Historia</a></li>
+                            <li><a href="index.html"><strong>Inicio</strong></a></li>
+                            <li><a href="pages/que_es.html">¿Qué es la I3D?</a></li>
                             <li><a href="pages/trabajos.html">Trabajos</a></li>
                             <li><a href="pages/materiales.html">Materiales</a></li>
                             <li><a href="pages/contacto.html">Contacto</a></li>
-                        </ul>        
+                        </ul>
                     </div>
                 </div>
             </nav>
         </div>
 
+        <!-- seccion main -->
         <div class="container">
             <main>
                 <section class="row justify-content-center">
-                    <a href="pages/historia.html" class="col-xl col-lg-6 col-md-6 col-sm-12 squareLinks">
-                        <h2>Quienes Somos</h2><!-- descript: "Te invitamos a conocer los origines del emprendimiento" -->
+                    <a href="pages/que_es.html" class="col-xl col-lg-6 col-md-6 col-sm-12 squareLinks">
+                        <h2>¿Qué es la Impresión 3d?</h2><!-- descript: "Te invitamos a conocer los origines del emprendimiento" -->
                     </a>
                     <a href="pages/trabajos.html" class="col-xl col-lg-6 col-md-6 col-sm-12 squareLinks">
                         <h2>Trabajos</h2> <!-- descript: "Breve galeria con ejemplos de lo que otros clientes pidieron" -->
@@ -53,15 +58,28 @@
                     </a>
                 </section>
             </main>
+
+            <!-- seccion footer -->
             <footer id="bot">
-                <hr width="50%"/>
+                <hr />
                 <div>
-                    <p class="copyRFooter">&copy; Copyright 2020 - Coderhouse &reg; Camada 10755</p>
+                    <div class="social-icons">
+                        <a href="https://plus.google.com" target="_blank" title="Google + (defunct, for demo purposes)"><span class="icon-google-plus3"></span></a>&nbsp;
+                        <a href="https://www.facebook.com" target="_blank" title="Facebook (for demo purposes)"><span class="icon-facebook2"></span></a>&nbsp;
+                        <a href="https://www.instagram.com/imprimundo3d" target="_blank" title="Official Instagram account"><span class="icon-instagram"></span></a>&nbsp;
+                        <a href="https://www.youtube.com" target="_blank" title="YouTube (for demo purposes)"><span class="icon-youtube"></span></a>&nbsp;
+                        <a href="https://www.tumblr.com/" target="_blank" title="Tumblr (for demo purposes)"><span class="icon-tumblr2"></span></a>&nbsp;
+                        <a href="https://www.reddit.com/r/3Dprinting/" target="_blank" title="3DPrinting Sub-Reddit"><span class="icon-reddit"></span></a>&nbsp;
+                        <a href="https://es.wikipedia.org/wiki/Impresi%C3%B3n_3D" target="_blank" title="Wikipedia 3D printing article"><span class="icon-wikipedia"></span></a>&nbsp;
+                    </div>
+                    <p class="copyRFooter">&reg; Imprimundo3D - &copy; 2021</p>
                 </div>
             </footer>
         </div>
+
+        <!-- seccion scripts -->
+        <script src="js/remWaterMark.js"></script> <!-- remover la molesta marca de agua de 000webhost -->
         <script src="js/popper.min.js"></script> <!-- CDN de la librería de Popper  -->
         <script src="js/bootstrap-4.5.3.min.js"></script> <!-- CDN de Bootstrap del JS -->
-        <script src="js/remWaterMark.js"></script> <!-- remover la molesta marca de agua de 000webhost -->
     </body>
 </html>

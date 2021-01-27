@@ -1,9 +1,15 @@
-/* orden secciones: TAGS, CLASES, IDS, EFECTOS, RESPONSIVE/media-queries */
+@charset "UTF-8";
+/* orden secciones: font-imports, TAGS, CLASES, IDS, RESPONSIVE/media-queries, EFECTOS, overwrites-bootstrap */
 
 @import "vars";
 
+/* seccion font-imports */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *{ /* reseter */
-    font-family: $ff-arial;
+    font-family: $ff-nuito-standard;
     margin: 0;
     padding: 0;
     /*color: #f3e600; /* Pantone 3945C */
@@ -26,22 +32,33 @@ body{
     }
     section, main{ text-align: $align-center; }
     footer div{ text-align: $align-center; }
+    h1, h2, h3, .copyRFooter{font-family: $ff-josefa-titles;}
     h1{ margin: $margin-125rem; }
-    p{margin: 8px 0px}
+    p{
+        margin: 8px 0px;
+        span{
+            font-size: 150%;
+        }
+    }
     a{
         text-decoration: none; /* redundante? posiblemente. util? dudoso. me deja tranquilo de que va a andar? definitivamente! */
         text-decoration-line: none;
         color: $color-negro;
-        font-family: $ff-impact;
-        font-weight: lighter;
-        letter-spacing: 1px;
+        font-family: $ff-monserrat-links;
+        //font-weight: lighter;
         em{
             text-transform: uppercase;
-            font-family: $ff-impact;
+            font-family: $ff-monserrat-links;
+        }
+        &:hover{
+            text-decoration: none;
+            text-decoration-line: none;
+            color: $color-base-orange;
         }
     }
     hr{
         margin: 8px auto;
+        width: 50%;
         min-width: 300px;
     }
     h2, h3{
@@ -63,7 +80,7 @@ body{
         padding-left: 0px;
     }
     nav{
-        margin: 0px 0px 130px 0px;
+        //margin: 0px 0px 130px 0px;
         ul{
             padding-left: 0px;
             margin: -5px 0px;
@@ -75,6 +92,7 @@ body{
                     border-top-right-radius: 10px;
                     border-bottom-right-radius: 10px;
                     font-size: $font-oversize;
+                    font-weight: bold;
                     margin: 0;
                     margin-left: $margin-125rem;
                     padding: 0;
@@ -89,15 +107,17 @@ body{
         border: $color-negro double 5px;
     }
     article p{
+        font-size: 1.2rem;
         padding: 16px 10px;
-        line-height: 1rem;
+        line-height: 1.2rem;
         img{
-            border: $color-negro 3px dotted;
-            padding: 3px;
-            width: $gal-img-size-sm;
-            height: $gal-img-size-sm;
-            &:hover{ border: $color-blanco 3px dotted; }
+            width: $gal-img-size-xs;
+            height: $gal-img-size-xs;
         }
+    }
+    .swiper-container {
+        width: $gal-img-size-xs + 100px;
+        height: $gal-img-size-xs + 125px;
     }
     table, th, tr, td{
         margin: auto;
@@ -141,11 +161,32 @@ body{
         }
     }
     main{
-        animation: mainWhoooosh 0.75s ease-in-out 0s 1 normal none running; /* ayuda-memoria: animation: {name, duration, timing-func, delay, iter-count, dir, fill-mode(??), play-state} */
+        //animation: mainWhoooosh 0.75s ease-in-out 0s 1 normal none running; /* ayuda-memoria: animation: {name, duration, timing-func, delay, iter-count, dir, fill-mode(??), play-state} */
         /* el hack no sirvio como tal... pero habia otra version que si! abajo implementado */
-        min-height: calc(100vh - 332px); /* footer-hack, values for mobile/responsive "narrow" */
+        min-height: calc(100vh - 350px); /* footer-hack, values for mobile/responsive "narrow" */
     }
+    iframe{
+        border: 0;
+    }
+
     /* seccion CLASES */
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
     .errorDiv{
         background: top/contain url("../images/404_fail_mobile_bw.jpg") no-repeat;
         width: 100%;
@@ -165,6 +206,7 @@ body{
         color: $color-base-orange;
         min-width: 450px;
         display: inline;
+        margin-top: 6px;
     }
     .rowPar{
         background-color: #cecece;
@@ -178,11 +220,11 @@ body{
     }
     .dropdown-menu{
         width: 100%;
-        background-color: transparent;
+        //background-color: transparent;
         border: 0px;
     }
     .squareLinks{
-        height: $gal-img-size-sm;
+        height: 280px;
         margin: auto 3px 3px 3px;
         margin-top: 30px;
         background-color: rgba(218, 80, 16, 0.1);
@@ -195,15 +237,18 @@ body{
             background-color: rgba(218, 80, 16, 0.4);
             color: rgba(0, 0, 0, 0.6);
         }
-        
     }
-    .darkHover{
+    .coloredHover{
         margin: 0 auto 16px;
+        border: 1px white solid;
         border-radius: 0px 0px 40px 40px;
         padding-bottom: 10px;
         &:hover{
             background-color: rgba(218, 80, 16, 0.75);
             & div:hover{ background-color: unset; }
+        }
+        & p{
+            margin: 0px 0px;
         }
     }
     .imgFilament{ /* hack feo para que no se desacomoden las imagenes del fila "/ */
@@ -227,11 +272,57 @@ body{
         filter: grayscale(80%);
         opacity: 0.6;
     }
+
+    .social-icons{
+        font-size: 20px;
+    }
+    .icon-google-plus3{
+        &:hover, &:active{
+            color: rgba(255, 50, 100, 0.75);
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.75);
+        }
+    }
+    .icon-facebook2{
+        &:hover, &:active{
+            color: rgba(0, 0, 255, 0.75);
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.75);
+        }
+    }
+    .icon-instagram{
+        &:hover, &:active{
+            color: rgba(255, 0, 255, 0.75);
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.75);
+        }
+    }
+    .icon-youtube{
+        &:hover, &:active{
+            color: rgba(255, 0, 0, 0.75);
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.75);
+        }
+    }
+    .icon-tumblr2{
+        &:hover, &:active{
+            color: rgba(0, 0, 128, 0.75);
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.75);
+        }
+    }
+    .icon-reddit{
+        &:hover, &:active{
+            color: rgba(180, 100, 0, 0.75);
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.75);
+        }
+    }
+    .icon-wikipedia{
+        &:hover, &:active{
+            color: rgba(128, 128, 128, 0.75);
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.75);
+        }
+    }
 }
 
 /* seccion IDS */
 #titleSection{
-    text-decoration-line: overline underline;
+    text-decoration-line: underline;
     text-decoration-style: double;
     color: $color-base-orange;
     filter: grayscale(35%);
@@ -239,14 +330,20 @@ body{
 }
 #top{ margin-top: 8px; }
 #dropdownMenu1{ width: 100%; }
+#responsiveVideo{
+    width: 275px;
+    height: 155px;
+    margin: 10px 0px;
+}
 
-/* seccion EFECTOS */
-@keyframes linkFocus{ 
+/* seccion EFECTOS *OVERWRITES BOOTSTRAP */
+@keyframes linkFocus{
     0%{ background-color: #b0b0b0; }
     50%{ background-color: $color-base-orange; }
     100%{ background-color: #b0b0b0; }
 }
-@keyframes mainWhoooosh{ /* salio buenisimo (aunque sea un efecto medio "violento" a la vista jaja, gracias a la union propia, de tutores y un compañero!! */
+/* legacy code. shame to delete since it works as intended :,)
+@keyframes mainWhoooosh{
     @each $val, $resta in $valResta{
         #{$val} {
             transform: translateY($resta);
@@ -254,6 +351,7 @@ body{
         }
     }
 }
+*/
 
 /* seccion RESPONSIVE/media-queries */
 @media only screen and (min-width: 480px){ /* no es un breakpoint oficial, pero da mas control sobre los tamaños! */
@@ -274,12 +372,28 @@ body{
         .imgFilament{ width: 300px; }
     }
 }
+@media only screen and (min-width: 576px){
+    #responsiveVideo{
+        width: 360px;
+        height: 202px;
+    }
+    body{
+        article p img{
+            width: $gal-img-size-sm;
+            height: $gal-img-size-sm;
+        }
+        .swiper-container {
+            width: $gal-img-size-sm + 100px;
+            height: $gal-img-size-sm + 125px;
+        }
+    }
+}
 @media only screen and (min-width: 768px){
     body{
         main{
-            animation: mainWhoooosh 0.75s ease-in-out 0s 1 normal none running; /* ayuda-memoria: animation: {name, duration, timing-func, delay, iter-count, dir, fill-mode(??), play-state} */
+            //animation: mainWhoooosh 0.75s ease-in-out 0s 1 normal none running; /* ayuda-memoria: animation: {name, duration, timing-func, delay, iter-count, dir, fill-mode(??), play-state} */
             /* el hack no sirvio como tal... pero habia otra version que si! abajo implementado */
-            min-height: calc(100vh - 276px); /* footer-hack = (header + margin:) 185 + 8 + (footer + margin:) 46 + 8 = 247... != 275 --> faltan 28px!! */
+            min-height: calc(100vh - 305px); /* footer-hack = (header + margin:) 185 + 8 + (footer + margin:) 46 + 8 = 247... != 275 --> faltan 28px!! */
         }
         nav{
             margin: 0px;
@@ -298,6 +412,10 @@ body{
             width: $gal-img-size-md;
             height: $gal-img-size-md;
         }
+        .swiper-container {
+            width: $gal-img-size-md + 100px;
+            height: $gal-img-size-md + 125px;
+        }
         .errorDiv{
             background: top/contain url("../images/404_fail_desktop_bw.jpg") no-repeat;
             width: 100%;
@@ -308,7 +426,12 @@ body{
             top: 0px;
             filter: blur(2px);
             background-size: 150% auto;
-            opacity: 0.7;    
+            opacity: 0.7;
+        }
+        .dropdown-menu{
+            width: 200px;
+            //background-color: transparent;
+            border: 0px;
         }
         .dropdown, #dropdownMenu1{ width: 100px; }
         .copyRFooter{
@@ -323,6 +446,10 @@ body{
             left: 0px;
         }
     }
+    #responsiveVideo{
+        width: 480px;
+        height: 270px;
+    }
 }
 @media only screen and (min-width: 1024px){
     body{
@@ -334,7 +461,15 @@ body{
             width: $gal-img-size-lg;
             height: $gal-img-size-lg;
         }
+        .swiper-container {
+            width: $gal-img-size-lg + 100px;
+            height: $gal-img-size-lg + 125px;
+        }
         .imgFilament {width: 350px; }
+    }
+    #responsiveVideo{
+        width: 560px;
+        height: 315px;
     }
 }
 @media only screen and (min-width: 1200px){
@@ -343,5 +478,5 @@ body{
     }
 }
 
-/* seccion OVERWRITES BOOTSTRAP */
+/* seccion overwrites-bootstrap */
 /* nada por aca... yet! */

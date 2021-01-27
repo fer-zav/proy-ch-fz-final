@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon_custom.eot?mmkbtk');
+  src:  url('../fonts/icomoon_custom.eot?mmkbtk#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon_custom.ttf?mmkbtk') format('truetype'),
+    url('../fonts/icomoon_custom.woff?mmkbtk') format('woff'),
+    url('../fonts/icomoon_custom.svg?mmkbtk#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cogs:before {content: "\2200";}
+.icon-recycle:before {content: "\2201";}
+.icon-hand-lizard:before {content: "\2202";}
+.icon-utensils-alt:before {content: "\2203";}
+.icon-expand-arrows:before {content: "\2204";}
+.icon-window-close:before {content: "\2205";}
+.icon-box-check:before {content: "\2206";}
+.icon-fill-drip:before {content: "\2207";}
+.icon-dragon:before {content: "\2208";}
+.icon-duck:before {content: "\2209";}
+.icon-hammer:before {content: "\2210";}
+.icon-wine-bottle:before {content: "\2211";}
+.icon-humidity:before {content: "\2212";}
+.icon-tornado:before {content: "\2213";}
+.icon-flask-potion:before {content: "\2214";}
+.icon-gamepad-alt:before {content: "\2215";}
+.icon-bahai:before {content: "\2216";}
+.icon-fire-alt:before {content: "\2217";}
+.icon-google-plus3:before {content: "\2218";}
+.icon-facebook2:before {content: "\2219";}
+.icon-instagram:before {content: "\2220";}
+.icon-youtube:before {content: "\2221";}
+.icon-tumblr2:before {content: "\2222";}
+.icon-reddit:before {content: "\2223";}
+.icon-wikipedia:before {content: "\2224";}
